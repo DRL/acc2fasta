@@ -23,7 +23,8 @@ B<acc2fasta.pl> [B<-q>] <acc_file> [B<-l>] <list_file> [B<-d>] <num> [B<-fw>]
 B<acc2fasta.pl> takes a file of accession numbers, either in CSV (Filemaker export)
 of TXT (one accession per line), and fetches the respective sequence with a cleaned 
 header. 
-If the input_file is in CSV (, a filter can be applied by providing a list of 
+If the input_file is in CSV, the -list option provides a way of filtering.
+Check the 'test' files, for concrete examples.
 
 =head1 OPTIONS
 
@@ -35,15 +36,15 @@ CSV or TXT file of accession numbers.
 
 =item B<-l>ist
 
-List of identifiers (e.g. 'seq1A') in TXT format (i.e Windows Text format when exporting from excel) that limits the ACC to be parsed from CSV.
+List of identifiers (e.g. 'seq1A') in TXT format (i.e Windows Text format when exporting from excel) for which ACCs will be fetched.
 
 =item B<-d>esc
 
-Maximum length (e.g. '50') of sequence descriptions (headers) in the output fasta file.
+Indicates the maximum allowed length of sequence descriptions (headers) in output fasta file (Default is 50).
 
 =item B<-f>ull_desc
 
-Write full sequence descriptions (headers) in the output fasta file (overwrites [-desc]).
+Forces full sequence descriptions (headers) in the output fasta file (overwrites [-desc]).
 
 =item B<-w>hitespaces
 
