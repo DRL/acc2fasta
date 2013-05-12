@@ -1,0 +1,64 @@
+##############################################################################
+#
+# File   :    acc2fasta.pl
+# History:  	2013-05-12 (DRL) first implementation
+#
+##############################################################################
+#
+#  Perl script that takes in a list of accession numbers and fetches the fasta
+#  files (with sanitised headers) from genbank
+#
+##############################################################################
+
+=head1 
+
+acc2fasta.pl - convert a bunch of accession numbers into a bunch of sequences
+
+=head1 SYNOPSIS
+
+B<acc2fasta.pl> [B<-q>] <acc_file> [B<-l>] <list_file> [B<-d>] <num> [B<-fw>] 
+
+=head1 DESCRIPTION
+
+B<acc2fasta.pl> takes a file of accession numbers, either in CSV (Filemaker export)
+of TXT (one accession per line), and fetches the respective sequence with a cleaned 
+header. 
+If the input_file is in CSV (, a filter can be applied by providing a list of 
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-q>uery
+    
+CSV or TXT file of accession numbers.
+
+=item B<-l>ist
+
+List of identifiers (e.g. 'seq1A') in TXT format (i.e Windows Text format when exporting from excel) that limits the ACC to be parsed from CSV.
+
+=item B<-d>esc
+
+Maximum length (e.g. '50') of sequence descriptions (headers) in the output fasta file.
+
+=item B<-f>ull_desc
+
+Write full sequence descriptions (headers) in the output fasta file (overwrites [-desc]).
+
+=item B<-w>hitespaces
+
+Words in sequence descriptions (headers) in the output fasta file are separated by spaces (Default is underscore '_').
+
+=back
+
+=head1 DIAGNOSTICS
+
+=over 4
+
+=back
+
+=head1 AUTHOR
+
+Dominik R. Laetsch, dominik.laetsch@gmail.com
+
+=cut
